@@ -38,7 +38,7 @@ body {
 .task {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 .task-row-wrapper {
@@ -72,7 +72,11 @@ button:hover {
     color: #3a3A3a;
 }
 
-/* Heading */
+/* 
+=========================
+       heading
+=========================
+*/
 h3,
 label[for='new-task'] {
     color: #333;
@@ -101,7 +105,11 @@ input[type="text"]:focus {
     color: #333;
 }
 
-/* New Task */
+/* 
+=========================
+       new task
+=========================
+*/
 label[for='new-task'] {
     display: block;
     margin: 0 0 20px;
@@ -111,7 +119,11 @@ input#new-task {
     width: 318px;
 }
 
-/* Task list */
+/* 
+=========================
+       task list
+=========================
+*/
 li {
     overflow: hidden;
     padding: 20px 0;
@@ -138,7 +150,7 @@ li > label {
 }
 
 li >    input[type="text"] {
-    width: 226px
+    width: 226px;
 }
 
 button.delete img {
@@ -151,20 +163,28 @@ button.delete img:hover {
     transform: rotateZ(0);
 }
 
-/* Completed */
+/* 
+=========================
+       completed
+=========================
+*/
 ul#completed-tasks label {
-    text-decoration: line-through
+    text-decoration: line-through;
     color: #888;
 }
 
-/* Edit Task */
+/* 
+=========================
+       edit task
+=========================
+*/
 ul li input[type=text] {
-    display:none
+    display:none;
 }
 
 ul li.editMode input[type=text] {
     display:inline-block;
-    width:224px
+    width:224px;
 }
 
 ul li.editMode label {
