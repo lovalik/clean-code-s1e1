@@ -3,14 +3,14 @@
        Basic Style
 =========================
 */
-body {
+.common {
   font-family: "Lato", sans-serif;
   color: #333333;
 
   background-color: #f8f8f8;
 }
 
-.aaa {
+.todo-app__header {
   display: block;
   width: 500px;
   margin: 0 auto;
@@ -18,17 +18,17 @@ body {
   text-align: right;
 }
 
-.aaa img {
+.todo-app__header img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.todo-app__header .more_inf {
   font-family: "Passion One", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
 
-  .aaa {
+  .todo-app__header {
     text-align: center;
   }
 
@@ -146,7 +146,7 @@ li {
 
   overflow: hidden;
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 li > * {
