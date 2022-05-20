@@ -26,7 +26,7 @@ body {
   font-family: "Passion One", sans-serif;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
   .aaa {
     text-align: center;
