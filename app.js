@@ -68,16 +68,12 @@ function createNewTaskElement(taskString) {
 
 function addTask() {
   console.log("Add Task...");
-  //Create a new list item with the text from the #new-task:
   if (!taskInput.value) return;
   const listItem = createNewTaskElement(taskInput.value);
 
   incompleteTaskHolder.append(listItem);
-  // bindTaskEvents(listItem, taskCompleted);
   taskInput.value = "";
 }
-
-//Edit an existing task.
 
 function editTask() {
   console.log("Edit Task...");
@@ -112,7 +108,6 @@ function editTask() {
   }
 }
 
-//Delete task.
 function deleteTask() {
   console.log("Delete Task...");
   const listItem = event.currentTarget.closest(".list-task");

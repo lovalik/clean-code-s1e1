@@ -70,9 +70,7 @@ button{
 .todo-app__button-edit,
 .todo-app__button-delete {
   padding: 0 15px;
-  /* outline: solid 1px red; */
 }
-
 
 .todo-app__section-add-item_button-add-item:hover,
 .todo-app__button-edit:hover,
@@ -150,21 +148,9 @@ button{
    section-unfinished-tasks
 ===============================
 */
-.todo-app__button-edit {
-  /* outline: solid 2px red; */
-}
-.todo-app__section-unfinished-tasks_list {
-    /* outline: solid 1px red; */
-}
-
 .todo-app__section-add-item_new-task:focus,
 .todo-app__task-input-edit-mode:focus {
   color: #333333;
-}
-
-.todo-app__task-label-edit-mode,
-.todo-app__task-label-not-edit-mode {
-  /* outline: solid 1px rgb(43, 0, 255); */
 }
 
 .todo-app__task-label-not-edit-mode {
@@ -203,8 +189,6 @@ button{
   background: #ffffff;
   border-radius: 6px;
   overflow: auto;
-
-  /* outline: solid 1px red; */
 }
 
 .todo-app__section-unfinished-tasks_list-task,
