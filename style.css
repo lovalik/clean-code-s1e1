@@ -1,15 +1,32 @@
 /* 
 =========================
-       Basic Style
+         body
 =========================
 */
-.common {
+.todo-app {
   font-family: "Lato", sans-serif;
   color: #333333;
 
   background-color: #f8f8f8;
 }
 
+
+* {
+  outline: solid 1px red;
+}
+
+.section-unfinished-tasks_list-task {
+  background-color: #b46a6a;
+}
+
+section {
+    outline: solid 2px blue;
+}
+/* 
+=========================
+         header
+=========================
+*/
 .todo-app__header {
   display: block;
   width: 500px;
@@ -18,11 +35,11 @@
   text-align: right;
 }
 
-.todo-app__header img {
+.todo-app__header_logo {
   width: 100%;
 }
 
-.todo-app__header .more_inf {
+.todo-app__header_link {
   font-family: "Passion One", sans-serif;
 }
 
@@ -34,21 +51,55 @@
 
 }
 
-.centered-main-page-element {
+/* 
+=========================
+         main
+=========================
+*/
+.todo-app__main {
   display: block;
   width: 500px;
   margin: 0 auto;
 }
 
-.task {
+.editMode {
+  outline: solid 2px rgb(255, 0, 212);
+  background-color: aqua;
+
+}
+
+/* 
+===============================
+   todo-app__section-add-item
+===============================
+*/
+
+.todo-app__section-add-item_heading {
+    /* display: block; */
+    margin: 0 0 20px;
+  }
+
+.todo-app__task {
   display: inline-block;
   flex-grow: 1;
   width: 56%;
 }
 
-.task-row-wrapper {
+.todo-app__section-add-item_input-wrapper {
   display: flex;
+  outline: solid 1px red;
 }
+
+.input-text {
+  display: none;
+}
+.
+
+.section-unfinished-tasks_list {
+    outline: solid 1px red;
+}
+
+
 
 ul {
   margin: 0;
@@ -87,7 +138,7 @@ button:hover {
 =========================
 */
 h3,
-label[for='new-task'] {
+label[for='todo-app__new-task'] {
   margin: 0;
   padding: 30px 0 10px;
 
@@ -124,13 +175,10 @@ input[type="text"]:focus {
         new task
 =========================
 */
-label[for='new-task'] {
-  display: block;
-  margin: 0 0 20px;
-}
 
-input#new-task {
-  width: 318px;
+
+input#todo-app__new-task {
+  /* width: 318px; */
 }
 
 /* 
@@ -153,7 +201,7 @@ li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.input-checkbox {
   margin: 0 10px;
 }
 
@@ -169,14 +217,14 @@ li > input[type="text"] {
   width: 226px;
 }
 
-button.delete img {
+.todo-app__button-delete img {
   height: 2em;
 
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.todo-app__button-delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -185,7 +233,7 @@ button.delete img:hover {
        completed
 =========================
 */
-ul#completed-tasks label {
+.section-finished-tasks_list label {
   color: #888888;
   text-decoration: line-through;
 }
