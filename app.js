@@ -36,7 +36,7 @@ function createNewTaskElement(taskString) {
   const deleteButton = document.createElement("button");
   const deleteButtonImg = document.createElement("img");
 
-  listItem.className = "todo-app__section-unfinished-tasks_list-task vvvvvvvvv";
+  listItem.className = "todo-app__section-unfinished-tasks_list-task list-task";
 
   label.innerText = taskString;
   label.className = "todo-app__task-label-not-edit-mode";
@@ -83,7 +83,7 @@ function editTask() {
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
 
-  const listItem = event.currentTarget.closest(".vvvvvvvvv");
+  const listItem = event.currentTarget.closest(".list-task");
 
   const label = listItem.getElementsByTagName("label")[0];
   const editInput = listItem.getElementsByTagName("input")[1];
@@ -115,7 +115,7 @@ function editTask() {
 //Delete task.
 function deleteTask() {
   console.log("Delete Task...");
-  const listItem = event.currentTarget.closest(".vvvvvvvvv");
+  const listItem = event.currentTarget.closest(".list-task");
   listItem.remove();
 }
 
