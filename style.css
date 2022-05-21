@@ -139,6 +139,7 @@ button{
 }
 
 .todo-app__section-add-item_new-task {
+  padding-left: 10px;
   border: 1px solid #dddddd;
   background: #ffffff;
   border-radius: 6px;
