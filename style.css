@@ -64,7 +64,7 @@ button{
   font-size: 15px;
   color: #888888;
   background: none;
-  border: 0px;
+  border: 0;
 }
 
 .todo-app__button-edit,
@@ -206,7 +206,7 @@ button{
        completed
 =========================
 */
-.completed {
+.todo-app__completed {
   color: #888888;
   text-decoration: line-through;
 }
