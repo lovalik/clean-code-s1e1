@@ -15,13 +15,13 @@ function changeTaskState() {
     console.log("Complete Task...");
     listItem.classList.remove("todo-app__section-unfinished-tasks_list-task");
     listItem.classList.add("todo-app__section-finished-tasks_list-task");
-    label.classList.add("completed");
+    label.classList.add("todo-app__completed");
     completedTasksHolder.append(listItem);
   } else {
     console.log("Incomplete Task...");
     listItem.classList.remove("todo-app__section-finished-tasks_list-task");
     listItem.classList.add("todo-app__section-unfinished-tasks_list-task");
-    label.classList.remove("completed");
+    label.classList.remove("todo-app__completed");
     incompleteTaskHolder.append(listItem);
   }
 }
