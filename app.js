@@ -39,14 +39,14 @@ function createNewTaskElement(taskString) {
   listItem.className = "todo-app__section-unfinished-tasks_list-task list-task";
 
   label.innerText = taskString;
-  label.className = "todo-app__task-label-not-edit-mode";
+  label.className = "todo-app__task-label_not-edit-mode";
 
   checkBox.type = "checkbox";
   checkBox.className = "todo-app__input-checkbox";
   checkBox.addEventListener("click",changeTaskState);
 
   editInput.type = "text";
-  editInput.className = "todo-app__task-input-not-edit-mode";
+  editInput.className = "todo-app__task-input_not-edit-mode";
 
   editButton.innerText = "Edit";
   editButton.className = "todo-app__button-edit";
@@ -85,13 +85,13 @@ function editTask() {
   const editInput = listItem.getElementsByTagName("input")[1];
   const editButton = listItem.querySelector(".todo-app__button-edit");
 
-  if (label.classList.contains("todo-app__task-label-not-edit-mode")) {
+  if (label.classList.contains("todo-app__task-label_not-edit-mode")) {
     editButton.innerText = "Save";
 
     editInput.value = label.innerText;
 
-    label.classList.remove("todo-app__task-label-not-edit-mode");
-    editInput.classList.remove("todo-app__task-input-not-edit-mode");
+    label.classList.remove("todo-app__task-label_not-edit-mode");
+    editInput.classList.remove("todo-app__task-input_not-edit-mode");
 
     label.classList.add("todo-app__task-label-edit-mode");
     editInput.classList.add("todo-app__task-input-edit-mode");
@@ -103,8 +103,8 @@ function editTask() {
     label.classList.remove("todo-app__task-label-edit-mode");
     editInput.classList.remove("todo-app__task-input-edit-mode");
 
-    label.classList.add("todo-app__task-label-not-edit-mode");
-    editInput.classList.add("todo-app__task-input-not-edit-mode");
+    label.classList.add("todo-app__task-label_not-edit-mode");
+    editInput.classList.add("todo-app__task-input_not-edit-mode");
   }
 }
 
