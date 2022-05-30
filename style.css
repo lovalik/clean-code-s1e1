@@ -1,148 +1,213 @@
-/* Basic Style */
-body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-family: Lato, sans-serif;
-}
-.aaa {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-    text-align: right;
-}
-.aaa img {
-    width: 100%;
-}
-.aaa .more_inf {
-    font-family: fantasy, cursive;
+/* 
+=========================
+      common styles
+=========================
+*/
+.todo-app {
+  font-family: "Lato", sans-serif;
+  color: #333333;
+  background-color: #f8f8f8;
 }
 
-@media (max-width:768px) {
-.aaa { text-align: center;
-}
-}
-.centered-main-page-element {
-    display: block;
-    width: 500px;
-    margin: 0 auto 0;
-}
-.task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1
-}
-.task-row-wrapper {
-    display: flex;
-}
-ul {
-    margin:0;
-    padding: 0px;
-}
-li, h3 {
-    list-style:none;
-}
-input,button{
-    outline:none;
-}
-button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    font-family: Lato, sans-serif;
-    cursor: pointer;
-}
-button:hover {
-    color: #3a3A3a;
-}
-/* Heading */
-h3,
-label[for='new-task'] {
-    color: #333;
-    font-weight: 700;
-    font-size: 15px;
-    border-bottom: 2px solid #333;
-    padding: 30px 0 10px;
-    margin: 0;
-    text-transform: uppercase;
-}
-input[type="text"] {
-    margin: 0;
-    font-size: 18px;
-    line-height: 18px;
-    height: 21px;
-    padding: 0 9px;
-    border: 1px solid #dDd;
-    background: #FFF;
-    border-radius: 6px;
-    font-family: Lato, sans-serif;
-    color: #888;
-}
-input[type="text"]:focus {
-    color: #333;
+.todo-app__section-heading {
+  margin: 0;
+  padding: 30px 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333333;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333333;
 }
 
-/* New Task */
-label[for='new-task'] {
-    display: block;
-    margin: 0 0 20px;
-}
-input#new-task {
-    width: 318px;
+.todo-app__section-unfinished-tasks_list,
+.todo-app__section-finished-tasks_list {
+  margin: 0;
+  padding: 0;
 }
 
-/* Task list */
-li {
-    overflow: hidden;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-li > * {
-    vertical-align: middle;
+.todo-app__section-unfinished-tasks_list-task,
+.todo-app__section-finished-tasks_list-task {
+  list-style: none;
 }
 
-li > input[type="checkbox"] {
-    margin: 0 10px;
-}
-li > label {
-    padding-left: 10px;
-    box-sizing: border-box;
-    font-size: 18px;
-    width: 226px;
-}
-li >    input[type="text"] {
-    width: 226px
-}
-button.delete img {
-    height: 2em;
-    transform: rotateZ(45deg);
-    transition: transform 200ms ease-in;
-}
-button.delete img:hover {
-    transform: rotateZ(0);
+.todo-app__input-checkbox {
+  margin: 0 10px;
 }
 
-/* Completed */
-ul#completed-tasks label {
-    text-decoration: line-through
-    color: #888;
+.todo-app__button-delete_image {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
 }
 
-/* Edit Task */
-ul li input[type=text] {
-    display:none
+.todo-app__button-delete_image:hover {
+  transform: rotateZ(0);
 }
 
-ul li.editMode input[type=text] {
-    display:inline-block;
-    width:224px
+/* допустимое использование теговых селекторов для сброса дефолтных стилей */
+input,
+button{
+  outline: none;
 }
 
-ul li.editMode label {
-    display:none;
+.todo-app__button-edit,
+.todo-app__button-delete,
+.todo-app__section-add-item_button-add-item {
+  cursor: pointer;
 }
+
+.todo-app__section-add-item_button-add-item,
+.todo-app__button-edit,
+.todo-app__button-delete {
+  width: 60px;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: #888888;
+  background: none;
+  border: 0;
+}
+
+.todo-app__button-edit,
+.todo-app__button-delete {
+  padding: 0 15px;
+}
+
+.todo-app__section-add-item_button-add-item:hover,
+.todo-app__button-edit:hover,
+.todo-app__button-delete:hover {
+  color: #3a3a3a;
+}
+
+/* 
+=========================
+         header
+=========================
+*/
+.todo-app__header {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.todo-app__header_logo {
+  width: 100%;
+}
+
+.todo-app__header_link {
+  font-family: "Passion One", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+
+  .todo-app__header {
+    text-align: center;
+  }
+
+}
+
+/* 
+=========================
+         main
+=========================
+*/
+.todo-app__main {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* 
+===============================
+   todo-app__section-add-item
+===============================
+*/
+.todo-app__section-add-item_heading {
+  margin: 0 0 20px;
+}
+
+.todo-app__section-add-item_input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-app__section-add-item_new-task {
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.todo-app__section-add-item_new-task {
+  padding-left: 10px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+/* 
+===============================
+   section-unfinished-tasks
+===============================
+*/
+.todo-app__section-add-item_new-task:focus,
+.todo-app__task-input-edit-mode:focus {
+  color: #333333;
+}
+
+.todo-app__task-label_not-edit-mode {
+  flex-grow: 1;
+  overflow: auto;
+  padding-left: 10px;
+  font-size: 18px;
+  border: solid 1px transparent;
+}
+
+.todo-app__task-label-edit-mode {
+  flex-grow: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.todo-app__task-input_not-edit-mode {
+  flex-grow: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  border-width: 0;
+}
+
+.todo-app__task-input-edit-mode {
+  flex-grow: 1;
+  padding: 0 0 0 10px;
+  font-size: 18px;
+  color: #888888;
+  line-height: 18px;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.todo-app__section-unfinished-tasks_list-task,
+.todo-app__section-finished-tasks_list-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* 
+=========================
+       completed
+=========================
+*/
+.todo-app__completed {
+  color: #888888;
+  text-decoration: line-through;
+}
+
